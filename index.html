@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Online Voting System</h1>
+            <p>Secure and convenient voting from anywhere</p>
+        </header>
+
+        <main>
+            <!-- Voter Registration Section -->
+            <section id="registration-section" class="active">
+                <h2>Voter Registration</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="voter-id">Voter ID:</label>
+                        <input type="text" id="voter-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="voter-name">Full Name:</label>
+                        <input type="text" id="voter-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="voter-email">Email:</label>
+                        <input type="email" id="voter-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="voter-dob">Date of Birth:</label>
+                        <input type="date" id="voter-dob" required>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </section>
+
+            <!-- Candidate Selection Section -->
+            <section id="candidate-section">
+                <h2>Select Your Candidate</h2>
+                <div class="candidates-container" id="candidates-container">
+                    <!-- Candidates will be dynamically added here -->
+                </div>
+                <button id="cast-vote-btn" class="btn" disabled>Cast Vote</button>
+            </section>
+
+            <!-- Confirmation Section -->
+            <section id="confirmation-section">
+                <h2>Confirm Your Vote</h2>
+                <p>You are about to vote for:</p>
+                <div id="selected-candidate-info"></div>
+                <div class="confirmation-buttons">
+                    <button id="confirm-vote" class="btn">Confirm Vote</button>
+                    <button id="change-vote" class="btn btn-secondary">Change Vote</button>
+                </div>
+            </section>
+
+            <!-- Thank You Section -->
+            <section id="thankyou-section">
+                <h2>Thank You for Voting!</h2>
+                <p>Your vote has been recorded successfully.</p>
+                <div id="vote-receipt"></div>
+                <button id="new-vote" class="btn">Start New Vote</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Secure Online Voting System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
